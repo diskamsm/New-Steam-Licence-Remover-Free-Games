@@ -29,7 +29,7 @@ Steam Game Remover is a containerized Python application that automatically remo
 
 2. **Export your Steam cookies**
    - Log into your Steam account in a browser
-   - Use a browser extension to export cookies in Netscape format
+   - Use a browser extension to export cookies in Netscape format ( [you can use this](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc?pli=1) )
    - Save the exported cookies as `cookie.txt` in the project directory
 
 3. **Convert cookies format**
