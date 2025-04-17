@@ -1,0 +1,19 @@
+services:
+  sgr:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sgr
+    network_mode: host
+    volumes:
+      - .:/app
+    working_dir: /app
+    entrypoint: /app/entrypoint.sh
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep -f 'python3 -u steam-game-remover.py' >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+    environment:
+      - PYTHONUNBUFFERED=1
